@@ -1,0 +1,33 @@
+/* transitions: Codrops, src https://tympanus.net/codrops/2013/04/23/fullscreen-layout-with-page-transitions/ */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body,
+html {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #f2ede3;
+    background: #333;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 0 5px;
+    text-transform: uppercase;
+    font-size: 80%;
+}
+
+a:hover {
+    color: #fff;
+}

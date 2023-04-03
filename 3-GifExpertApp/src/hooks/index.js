@@ -1,0 +1,1 @@
+export { useFetchGif } from './useFetchGif';
