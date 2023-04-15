@@ -4,7 +4,16 @@
             "type": "chrome",
             "name": "http://localhost:8080/",
             "request": "launch",
-            "url": "http://localhost:8080/"
+            "url": "http://localhost:8080/",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:/*": "${webRoot}/*",
+                "/./*": "${webRoot}/*",
+                "/src/*": "${webRoot}/src/*",
+                "/*": "*",
+                "/./~/*": "${workspaceFolder}/node_modules/*"
+            }
         }
     ]
 }
