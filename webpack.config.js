@@ -8,14 +8,20 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const config = {
     entry: './6-JournalApp/src/main.jsx',
     output: {
-        filename: 'bundle.[hash].js',
+        filename: 'bundle.[fullhash].js',
         path: path.join(__dirname, 'dist'),
     },
     plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
     mode: 'development',
     devtool: 'eval',
     devServer: {
-        static: path.resolve(__dirname, 'dist'),
+        static: {
+            directory: path.join(__dirname, 'dist/src'),
+        },
+        client: {
+            logging: 'error',
+        },
+        compress: true,
         port: 8080,
         hot: true,
         historyApiFallback: true,
@@ -62,9 +68,6 @@ const config = {
     resolve: {
         modules: [path.resolve(__dirname, 'reactbasico'), 'node_modules'],
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
-        fallback: {
-            crypto: false,
-        },
     },
 };
 
@@ -73,7 +76,7 @@ if (currentTask == 'build') {
     config.devtool = '';
     config.module.rules[0].use[0] = MiniCssExtractPlugin.loader;
     config.plugins.push(
-        new MiniCssExtractPlugin({ filename: 'main.[hash].css' }),
+        new MiniCssExtractPlugin({ filename: 'main.[fullhash].css' }),
         new CleanWebpackPlugin(),
         new WebpackManifestPlugin(),
     );
