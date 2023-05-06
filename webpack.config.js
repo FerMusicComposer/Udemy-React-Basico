@@ -10,6 +10,7 @@ const config = {
     output: {
         filename: 'bundle.[fullhash].js',
         path: path.join(__dirname, 'dist'),
+        publicPath: '/',
     },
     plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
     mode: 'development',

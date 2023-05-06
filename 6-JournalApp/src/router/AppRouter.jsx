@@ -6,7 +6,7 @@ import { ErrorPage } from '../ui/ErrorPage';
 
 const routesConfig = createBrowserRouter([
     {
-        path: '/auth/*',
+        path: 'auth/*',
         // ? Login Y registro
         element: (
             //   <PublicRoute>
@@ -26,10 +26,6 @@ const routesConfig = createBrowserRouter([
         ),
         children: JournalRoutes,
         errorElement: <ErrorPage />,
-    },
-    {
-        path: '/*',
-        element: <Navigate to={'/'} />,
     },
 ]);
 
