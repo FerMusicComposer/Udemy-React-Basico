@@ -9,7 +9,10 @@ export const JournalHomePage = () => {
     return (
         <>
             <h1>JournalHomePage</h1>
-            <IconButton sx={{ mr: 1, color: '#000' }} onClick={() => context.toggleTheme()}>
+            <IconButton
+                sx={context.mode === 'light' ? { mr: 1, color: '#000' } : { mr: 1, color: '#FFFd' }}
+                onClick={() => context.toggleTheme()}
+            >
                 {context.mode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
             </IconButton>
         </>
