@@ -1,5 +1,11 @@
 import React from 'react';
+import { AuthLayout } from '../layout';
+import { RegisterForm } from '../components';
 
 export const RegisterPage = () => {
-    return <h1>RegisterPage</h1>;
+    return (
+        <AuthLayout title="Register">
+            <RegisterForm />
+        </AuthLayout>
+    );
 };

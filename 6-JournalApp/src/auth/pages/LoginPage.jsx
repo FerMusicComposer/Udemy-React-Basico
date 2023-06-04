@@ -1,10 +1,11 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { AuthLayout } from '../layout';
+import { LoginForm } from '../components';
 
 export const LoginPage = () => {
     return (
-        <>
-            <h1>LoginPage</h1>
-        </>
+        <AuthLayout title="Login">
+            <LoginForm />
+        </AuthLayout>
     );
 };

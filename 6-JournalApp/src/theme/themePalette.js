@@ -13,18 +13,18 @@ export const themePalette = {
     //-------------------//
 
     //Light Palette Primary
-    lightPrimaryMain: '#1976d2',
-    lightPrimaryLight: '#42a5f5',
-    lightPrimaryDark: '#060847',
-    lightPrimaryContrastTxt: '#fdfafa',
+    lightPrimaryMain: '#D72638',
+    lightPrimaryLight: '#E1515F',
+    lightPrimaryDark: '#8B1824',
+    lightPrimaryContrastTxt: '#F2F9F4',
 
     //-------------------//
 
     //Light Palette Secondary
-    lightSecondaryMain: '#9c27b0',
-    lightSecondaryLight: '#ba68c8',
-    lightSecondaryDark: '#7b1fa2',
-    lightSecondaryContrastTxt: '#fcfafa',
+    lightSecondaryMain: '#D9D4C3',
+    lightSecondaryLight: '#F7F6F3',
+    lightSecondaryDark: '#3E3928',
+    lightSecondaryContrastTxt: '#0C0B08',
 
     //-------------------//
 
