@@ -2,28 +2,18 @@ import React from 'react';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { AuthRouter, AuthRoutes } from '../auth/routes';
 import { JournalRouter, JournalRoutes } from '../journal/routes';
-import { ErrorPage } from '../ui/ErrorPage';
+import { ErrorPage } from '../utils/ErrorPage';
 
 const routesConfig = createBrowserRouter([
     {
         path: 'auth/*',
-        // ? Login Y registro
-        element: (
-            //   <PublicRoute>
-            <AuthRouter />
-            //   </PublicRoute>
-        ),
+        element: <AuthRouter />,
         children: AuthRoutes,
         errorElement: <ErrorPage />,
     },
     {
-        // ? Journal App
         path: '/',
-        element: (
-            //   <PrivateRoute>
-            <JournalRouter />
-            //   </PrivateRoute>
-        ),
+        element: <JournalRouter />,
         children: JournalRoutes,
         errorElement: <ErrorPage />,
     },

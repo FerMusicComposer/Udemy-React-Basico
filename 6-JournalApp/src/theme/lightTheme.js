@@ -15,14 +15,6 @@ export const lightTheme = createTheme({
     },
     direction: 'ltr',
     components: {
-        MuiContainer: {
-            defaultProps: {
-                style: {
-                    paddingLeft: '10px',
-                    paddingRight: '10px',
-                },
-            },
-        },
         MuiTab: {
             defaultProps: {
                 style: {
@@ -34,19 +26,11 @@ export const lightTheme = createTheme({
                 },
             },
         },
-        MuiAppBar: {
-            defaultProps: {
-                style: {
-                    backgroundColor: tp.arcOrange,
-                },
-            },
-        },
-        MuiButton: {
-            defaultProps: {
-                style: {
-                    textTransform: 'none',
-                    boxShadow: 'none',
-                    borderRadius: '0.5em',
+        MuiDrawer: {
+            styleOverrides: {
+                paper: {
+                    backgroundColor: tp.lightBackgroundDefault,
+                    color: tp.lightTextPrimary,
                 },
             },
         },

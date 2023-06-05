@@ -1,25 +1,28 @@
-import React, { useContext } from 'react';
-import { IconButton, Typography } from '@mui/material';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import { ThemeModeContext } from '../../theme';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { IconButton } from '@mui/material';
+import { JournalLayout } from '../layout';
+import { NothingSelectedView, NoteView } from '../views/';
+import { AddOutlined } from '@mui/icons-material';
 
 export const JournalHomePage = () => {
-    const context = useContext(ThemeModeContext);
     return (
-        <>
-            <Typography variant="h1">JournalHomePage</Typography>
-            <IconButton
-                sx={context.mode === 'light' ? { mr: 1, color: '#000' } : { mr: 1, color: '#FFFd' }}
-                onClick={() => context.toggleTheme()}
-            >
-                {context.mode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
-            </IconButton>
+        <JournalLayout>
+            <NothingSelectedView />
+            {/* <NoteView /> */}
 
-            <Link to="auth/login">
-                <button>login</button>
-            </Link>
-        </>
+            <IconButton
+                size="large"
+                sx={{
+                    color: 'secondary.main',
+                    backgroundColor: 'primary.main',
+                    ':hover': { backgroundColor: 'primary.main', opacity: 0.9 },
+                    position: 'fixed',
+                    right: 50,
+                    bottom: 50,
+                }}
+            >
+                <AddOutlined sx={{ fontSize: 30 }} />
+            </IconButton>
+        </JournalLayout>
     );
 };
